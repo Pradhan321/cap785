@@ -1,0 +1,206 @@
+:root {
+    /* primary color */
+    --dark-pink: hsl(337, 48%, 49%);
+    --link-water-white: hsl(220, 60%, 99%);
+
+    /* secondary color */
+    --san-juan-blue: hsl(207, 33%, 32%);
+    --mirage-blue: hsl(207, 27%, 15%);
+    --charm-pink-actives: hsl(337, 60%, 64%);
+    --light-juan-blue: hsl(207, 16%, 50%);
+
+    /* font familly*/
+    --ff-body: 'Public Sans', sans-serif;
+    --ff-heading: 'DM Serif Display', serif;
+
+    /* font size */
+    --fs-body-400: .938rem;
+    --fs-v1-400: 4.5rem;
+    --fs-v2-400: 3.5rem;
+    --fs-v3-400: 3rem;
+    --fs-v4-400: 2rem;
+    --fs-v5-400: 2.25rem;
+    --fs-v6-400: 1.5rem;
+    --fs-v7-400: 1.25rem;
+    --fs-v8-400: 1.125rem;
+
+    /* font weight */
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+
+/* button */
+.pricing-btn {
+    background: transparent;
+    border: 2px solid var(--san-juan-blue);
+    color: var(--san-juan-blue);
+    margin: 2rem 0;
+    text-transform: capitalize;
+    transition: .6s cubic-bezier(0.37, 0, 0.63, 1);
+    width: 10rem;
+    cursor: pointer;
+}
+
+.pricing-btn:hover,
+.pricing-btn:active {
+    background: var(--san-juan-blue);
+    color: var(--link-water-white);
+}
+/* end button */
+
+
+/* form section */
+main {
+    background-color: var(--link-water-white);
+}
+
+.signup-form .user-name label,
+.signup-form .user-email label,
+.signup-form .company-name label,
+.signup-form .title-info label {
+    display: none;
+}
+
+.form-desc h1 {
+    font-size: var(--fs-v4-400);
+    padding: 1.2rem 0;
+    text-align: center;
+    color: var(--san-juan-blue);
+    margin-top: 3rem;
+}
+
+.user-name input,
+.user-email input,
+.company-name input,
+.title-info input {
+    width: 100%;
+    height: 42px;
+    background-color: var(--link-water-white);
+    border: none;
+    border-bottom: 1px solid hsl(207, 33%, 32%);
+    opacity: 70%;
+    padding: .6rem;
+    margin-bottom: .6rem;
+    font-family: var(--ff-body);
+}
+
+.msg-info textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid hsl(207, 33%, 32%);
+    opacity: 70%;
+    padding: .6rem;
+    font-family: var(--ff-body);
+    height: 89px;
+    background-color: var(--link-water-white);
+}
+
+.terms>input {
+    height: 24px;
+    width: 24px;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    background: var(--san-juan-blue);
+    mix-blend-mode: normal;
+    opacity: 25%;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terms p {
+    color: var(--san-juan-blue);
+    opacity: 90%;
+    margin-top: 1rem;
+}
+/* end form section */
+
+
+/* clients section */
+.clients {
+    background-color: transparent;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+    margin-top: 5rem;
+}
+
+.clients h2 {
+    font-size: var(--fs-v6-400);
+    color: var(--san-juan-blue);
+    opacity: 70%;
+    padding: 0 2rem;
+}
+/* end client section */
+
+
+/* media query for tablet */
+@media only screen and (min-width: 768px) {
+      .wrapper {
+          display: flex;
+          align-items: center;
+         flex-direction: column;
+      }
+    .form-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-desc h1 {
+        font-size: var(--fs-v3-400);
+        width: 575px;
+        padding: 0 2rem;
+    }
+    .clients h2 {
+        font-size: var(--fs-v4-400);
+        margin-bottom: 2rem;
+    }
+}
+/* end media query for tablet */
+
+
+/* media query for desktop */
+@media only screen and (min-width: 1120px) {
+    #header .nav-bar {
+        padding: 1rem 4rem;
+    }
+    .form-desc h1 {
+        text-align: left;
+        padding: 2rem 0;
+    }
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 2rem 4rem;
+    }
+    .form-desc {
+        display: flex;
+        align-items: flex-start;
+    }
+    .signup-form {
+        flex: 1;
+        max-width: 445px;
+    }
+    .clents-container {
+        flex: 1;
+        max-width: 550px;
+    }
+    .clients h2 {
+        font-size: var(--fs-v6-400);
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+    .logo {
+        gap: 1rem 5rem;
+    }
+}
+
+/* end media query for desktop */
